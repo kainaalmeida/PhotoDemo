@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="PhotoDemo.Views.RegisterPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    NavigationPage.HasNavigationBar="False"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="20" Spacing="10">
+
+                <ImageButton
+                    Margin="0,0,0,30"
+                    Command="{Binding BackCommand}"
+                    HorizontalOptions="Start"
+                    Source="btnback" />
+
+                <Label
+                    FontFamily="comfortaa"
+                    FontSize="Large"
+                    Text="Register" />
+
+                <Entry Keyboard="Email" Placeholder="Email" />
+                <Entry IsPassword="True" Placeholder="Password" />
+
+                <Button Style="{StaticResource btnBlack}" Text="NEXT" />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

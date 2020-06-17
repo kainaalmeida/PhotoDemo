@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="PhotoDemo.Views.HomePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    BackgroundImageSource="BG"
+    NavigationPage.HasNavigationBar="False"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="80" />
+            </Grid.RowDefinitions>
+
+            <Image
+                Grid.Row="0"
+                Source="logo"
+                VerticalOptions="Center" />
+
+            <Grid Grid.Row="1" BackgroundColor="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button
+                    Grid.Column="0"
+                    Margin="20,0,0,0"
+                    BackgroundColor="White"
+                    BorderColor="Black"
+                    BorderWidth="3"
+                    Command="{Binding LoginCommand}"
+                    CornerRadius="5"
+                    FontAttributes="Bold"
+                    FontFamily="comfortaa"
+                    Text="LOG IN"
+                    VerticalOptions="Center" />
+
+                <Button
+                    Grid.Column="1"
+                    Margin="0,0,20,0"
+                    BackgroundColor="Black"
+                    Command="{Binding RegisterCommand}"
+                    CornerRadius="5"
+                    FontAttributes="Bold"
+                    FontFamily="comfortaa"
+                    Text="REGISTER"
+                    TextColor="White"
+                    VerticalOptions="Center" />
+
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

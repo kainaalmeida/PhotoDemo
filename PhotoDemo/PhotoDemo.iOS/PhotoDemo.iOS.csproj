@@ -133,4 +133,82 @@
       <Name>PhotoDemo</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\BG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-Portrait.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Default%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\img01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\img02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\img03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\img04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\img05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\img06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\img07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\img08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\img09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\img10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgUser01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgUser02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgUser03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgUser04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\user01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\user02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\user03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\user04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\btnback.png" />
+  </ItemGroup>
 </Project>
