@@ -16,11 +16,6 @@ namespace PhotoDemo.Views
             BindingContext = ViewModel = new GalleryViewModel(Navigation);
         }
 
-        public GalleryPage(BrowseModel browseModel) : this()
-        {
-            ViewModel.BrowseModel = browseModel;
-        }
-
         public GalleryPage(DiscoverModel discoverModel) : this()
         {
             ViewModel.DiscoverModel = discoverModel;

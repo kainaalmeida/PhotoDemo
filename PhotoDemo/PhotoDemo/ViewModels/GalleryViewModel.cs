@@ -1,5 +1,4 @@
 ﻿using PhotoDemo.Models;
-using System;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -7,12 +6,6 @@ namespace PhotoDemo.ViewModels
 {
     public class GalleryViewModel : BaseViewModel
     {
-        private BrowseModel _browseModel;
-        public BrowseModel BrowseModel
-        {
-            get { return _browseModel; }
-            set { SetProperty(ref _browseModel, value); }
-        }
 
         private DiscoverModel _discoverModel;
 

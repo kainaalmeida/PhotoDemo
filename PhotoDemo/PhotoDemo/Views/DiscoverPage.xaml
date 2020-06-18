@@ -130,11 +130,8 @@
                                 TranslationY="{Binding IsFeatured, Converter={StaticResource FeaturedOffsetYConverter}}"
                                 VerticalOptions="Start"
                                 WidthRequest="{OnPlatform Android=160,
-                                                          iOS=155}">
-                                <Image.GestureRecognizers>
-                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.GalleryCommand, Source={x:Reference lstBrowsers}}" CommandParameter="{Binding .}" />
-                                </Image.GestureRecognizers>
-                            </Image>
+                                                          iOS=155}" />
+
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
 

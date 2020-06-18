@@ -12,37 +12,16 @@ namespace PhotoDemo.ViewModels
         private readonly INavigation _navigation;
         public IList<DiscoverModel> Discovers { get; set; }
         public IList<BrowseModel> Browses { get; set; }
-        public Command<BrowseModel> GalleryCommand { get; }
         public Command<DiscoverModel> DiscoverCommand { get; }
         public DiscoverViewModel(INavigation navigation)
         {
             _navigation = navigation;
-            GalleryCommand = new Command<BrowseModel>(async (item) => await ExecuteGalleryCommand(item));
             DiscoverCommand = new Command<DiscoverModel>(async (item) => await ExecuteDiscoverCommand(item));
             LoadUsers();
             LoadBrowsers();
         }
 
         private async Task ExecuteDiscoverCommand(DiscoverModel item)
-        {
-            try
-            {
-                if (IsBusy) return;
-
-                IsBusy = true;
-                await _navigation.PushModalAsync(new GalleryPage(item));
-            }
-            catch (System.Exception ex)
-            {
-                var msg = ex.Message;
-            }
-            finally
-            {
-                IsBusy = false;
-            }
-        }
-
-        private async Task ExecuteGalleryCommand(BrowseModel item)
         {
             try
             {
