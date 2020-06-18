@@ -35,8 +35,9 @@
                     Command="{Binding LoginCommand}"
                     CornerRadius="5"
                     FontAttributes="Bold"
-                    FontFamily="comfortaa"
+                    FontFamily="comfortaabold"
                     Text="LOG IN"
+                    TextColor="Black"
                     VerticalOptions="Center" />
 
                 <Button
@@ -46,7 +47,7 @@
                     Command="{Binding RegisterCommand}"
                     CornerRadius="5"
                     FontAttributes="Bold"
-                    FontFamily="comfortaa"
+                    FontFamily="comfortaabold"
                     Text="REGISTER"
                     TextColor="White"
                     VerticalOptions="Center" />

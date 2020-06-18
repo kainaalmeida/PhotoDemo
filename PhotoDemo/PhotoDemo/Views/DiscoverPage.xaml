@@ -48,6 +48,7 @@
                     TextColor="Black" />
 
                 <CarouselView
+                    x:Name="carousel"
                     Grid.Row="2"
                     Margin="20,0"
                     ItemsSource="{Binding Discovers}"
@@ -64,7 +65,11 @@
                                     Grid.Row="0"
                                     Margin="-10,0"
                                     Aspect="AspectFill"
-                                    Source="{Binding Img}" />
+                                    Source="{Binding Img}">
+                                    <Image.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.DiscoverCommand, Source={x:Reference carousel}}" CommandParameter="{Binding .}" />
+                                    </Image.GestureRecognizers>
+                                </Image>
 
                                 <Grid Grid.Row="1" Margin="0,10,0,0">
                                     <Grid.ColumnDefinitions>
@@ -106,6 +111,7 @@
                     TextColor="Black" />
 
                 <FlexLayout
+                    x:Name="lstBrowsers"
                     Grid.Row="4"
                     Margin="20,0"
                     AlignItems="Start"
@@ -124,7 +130,11 @@
                                 TranslationY="{Binding IsFeatured, Converter={StaticResource FeaturedOffsetYConverter}}"
                                 VerticalOptions="Start"
                                 WidthRequest="{OnPlatform Android=160,
-                                                          iOS=155}" />
+                                                          iOS=155}">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding Path=BindingContext.GalleryCommand, Source={x:Reference lstBrowsers}}" CommandParameter="{Binding .}" />
+                                </Image.GestureRecognizers>
+                            </Image>
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
 

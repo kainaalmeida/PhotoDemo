@@ -211,4 +211,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\btnback.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\imgOpaca.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\btnClose.png" />
+  </ItemGroup>
 </Project>
