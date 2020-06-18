@@ -20,7 +20,8 @@
                 <Label
                     FontFamily="comfortaa"
                     FontSize="Large"
-                    Text="Register" />
+                    Text="Register"
+                    TextColor="Black" />
 
                 <Entry Keyboard="Email" Placeholder="Email" />
                 <Entry IsPassword="True" Placeholder="Password" />

@@ -21,12 +21,16 @@
                 <Label
                     FontFamily="comfortaa"
                     FontSize="Large"
-                    Text="Log in" />
+                    Text="Log in"
+                    TextColor="Black" />
 
                 <Entry Keyboard="Email" Placeholder="Email" />
                 <Entry IsPassword="True" Placeholder="Password" />
 
-                <Button Style="{StaticResource btnBlack}" Text="LOG IN" />
+                <Button
+                    Command="{Binding LoginCommand}"
+                    Style="{StaticResource btnBlack}"
+                    Text="LOG IN" />
 
             </StackLayout>
         </ScrollView>
