@@ -12,6 +12,7 @@ namespace PhotoDemo.Views
         {
             InitializeComponent();
             BindingContext = new DiscoverViewModel(Navigation);
+            
         }
     }
 }

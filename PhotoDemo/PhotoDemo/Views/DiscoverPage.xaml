@@ -3,15 +3,30 @@
     x:Class="PhotoDemo.Views.DiscoverPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:PhotoDemo.Converters"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    iOS:Page.UseSafeArea="True"
     NavigationPage.HasNavigationBar="False"
     mc:Ignorable="d">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:BoolToStringConverter
+                x:Key="FeaturedOffsetYConverter"
+                FalseString="0"
+                TrueString="-85" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
         <ScrollView>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="400" />
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
                 </Grid.RowDefinitions>
@@ -21,12 +36,13 @@
                     Margin="20,20,20,0"
                     FontFamily="comfortaa"
                     FontSize="Large"
-                    Text="Discover" />
+                    Text="Discover"
+                    TextColor="Black" />
 
                 <Label
                     Grid.Row="1"
                     Margin="20,10"
-                    FontFamily="comfortaa-bold"
+                    FontFamily="comfortaabold"
                     FontSize="Medium"
                     Text="What's new today"
                     TextColor="Black" />
@@ -34,7 +50,8 @@
                 <CarouselView
                     Grid.Row="2"
                     Margin="20,0"
-                    ItemsSource="{Binding Discovers}">
+                    ItemsSource="{Binding Discovers}"
+                    VerticalOptions="Center">
                     <CarouselView.ItemTemplate>
                         <DataTemplate>
                             <Grid>
@@ -57,14 +74,14 @@
 
                                     <Image
                                         Grid.Column="0"
-                                        Aspect="Fill"
+                                        Aspect="AspectFit"
                                         Source="{Binding UserImg}"
                                         WidthRequest="40" />
 
                                     <StackLayout Grid.Column="1" Spacing="0">
                                         <Label
                                             FontAttributes="Bold"
-                                            FontFamily="comfortaa-bold"
+                                            FontFamily="comfortaabold"
                                             Text="{Binding Name}"
                                             TextColor="Black" />
                                         <Label
@@ -79,6 +96,39 @@
                         </DataTemplate>
                     </CarouselView.ItemTemplate>
                 </CarouselView>
+
+                <Label
+                    Grid.Row="3"
+                    Margin="20,30,20,20"
+                    FontFamily="comfortaabold"
+                    FontSize="Medium"
+                    Text="Browse all"
+                    TextColor="Black" />
+
+                <FlexLayout
+                    Grid.Row="4"
+                    Margin="20,0"
+                    AlignItems="Start"
+                    BindableLayout.ItemsSource="{Binding Browses}"
+                    Direction="Row"
+                    Wrap="Wrap">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Image
+                                x:Name="imgB"
+                                Margin="{OnPlatform Android='10,0,10,10',
+                                                    iOS='10,0,10,10'}"
+                                Aspect="AspectFit"
+                                HorizontalOptions="Center"
+                                Source="{Binding Img}"
+                                TranslationY="{Binding IsFeatured, Converter={StaticResource FeaturedOffsetYConverter}}"
+                                VerticalOptions="Start"
+                                WidthRequest="{OnPlatform Android=160,
+                                                          iOS=155}" />
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+
+                </FlexLayout>
 
             </Grid>
         </ScrollView>
